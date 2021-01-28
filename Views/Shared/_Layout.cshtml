@@ -1,0 +1,42 @@
+﻿<!--I know this website looks terrible I am sorry. The instructions were not descriptive on how
+pretty we needed to make this website look. I recognized how much I love bootsrtap last semester. I did try to avoid
+the css techniques I would usually use like bootstrap because the instructions said not to worry about that yet.
+Anyways I just wanted to apologize for how the website looks.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="~/img/Modern-Sailor-Cougar1.jpg"
+          type="image">
+    <!--This is a link to bring in bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" asp-controller="Home" asp-action="Index">Assignmnet 2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="GradeCalculator">Grade Calculator</a>
+            </div>
+        </div>
+    </nav>
+    <!--This is the header for my website and the can change.-->
+    <div class="jumbotron jumbotron-fluid" style="background-color: #5f84e3;">
+        <div class="container" style="text-align: center;">
+            <h1 class="display-4" style="color: white;">@ViewBag.Header</h1>
+        </div>
+    </div>
+    <br />
+    @RenderBody()
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Bootstrap links-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="~/js/gradecalculator.js"></script>
+</body>
+</html>
